@@ -1,8 +1,13 @@
 package com.skillfactory.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonPropertyOrder({"model_year", "color", "brand"})
 public class Car {
     private String brand;
     private String color;
+    @JsonProperty("model_year")
     private Integer modelYear;
 
     public Car() {
